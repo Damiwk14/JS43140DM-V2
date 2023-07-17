@@ -1,0 +1,166 @@
+
+
+header{
+    font-weight: bolder;
+    font-size: large;
+    color: #0b0c0c;
+    background-image: url(../Assets/Banner/GettyImages-1055479098.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    background-position: top;
+    background-attachment: fixed; }
+
+    .titulo-principal {
+        width: fit-content;
+        font-family: "Caveat";
+        border: none;
+        color: #0b0c0c;
+        text-decoration: dashed;
+        font-size: 85px;
+        padding-left: 20px;
+        padding-top: 50px;
+        animation-name: movimientosmisc;
+        animation-duration: 0.55s;
+        animation-timing-function: ease-in; }
+      
+    @keyframes movimientosmisc {
+        0% {
+        transform: translateY(-50px);
+        opacity: 0; }
+        100% {
+        transform: translateY(0px);
+        opacity: 1; } }
+    .titulo-principal:hover {
+        transform: translateY(15px);
+        transition: all 0.3s ease; }
+
+
+    .navbar {
+        height: 80px; }
+    .navbar .logo__img {
+        width: 120px;
+        height: 90px; }
+    .navbar .navbar-brand {
+        text-decoration: dashed;
+        font-size: xx-large;
+        font-family: "Caveat";
+        text-align: center; }
+    .navbar .navbar-brand:hover {
+        transform: scale(1.06);
+        transition: all 0.3s ease; }
+    .navbar .nav-link {
+        font-weight: 700;
+        font-family: "Caveat";
+        font-size: x-large; }
+    .navbar .nav-item {
+        font-weight: 700; }
+    .navbar .nav-item:hover {
+        transform: scale(1.03);
+        transition: all 0.3s ease; }
+
+    .presentacion-titulo{
+        text-align: center;}
+
+footer {
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-image: linear-gradient(to bottom, #EEF1EF, #A9B4C2);
+    line-height: 15px;
+    font-family: "Inter"; }
+    footer a {
+      color: #0b0c0c;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 1px; }
+    footer .legal {
+      line-height: 30px;
+      padding-top: 15px;
+      font-family: "Inter";
+      font-weight: 500; }
+    footer .footer2 {
+      font-family: "Inter";
+      flex-direction: column; }
+    footer .redes-sociales {
+      font-weight: bold;
+      padding: 10px; }
+    footer .redes-sociales:hover {
+      transform: scale(1.02);
+      transition: all 0.3s ease; }
+      footer .redes-sociales a {
+      text-decoration: none; }
+    footer .footer__text {
+      padding: 10px;
+      color: #0b0c0c; }
+
+
+    .categorias-contenedor{
+        padding:5vh;
+        height: 65vh;
+        background-image: linear-gradient(to bottom, #EEF1EF, #A9B4C2);}
+
+                     
+        .categoria1{                       
+            padding: 4vh;
+            display: flex;
+            justify-content: center;
+            height: 15vh;
+            background-color:#4a4e69;}
+            .categoria1:hover {
+                transform: translateY(5px);
+                transition: all 0.3s ease; } 
+
+        .categoria2{                       
+            padding: 4vh;
+            display: flex;
+            justify-content: center;
+            height: 15vh;
+            background-color:#9a8c98;}
+            .categoria2:hover {
+                transform: translateY(5px);
+                transition: all 0.3s ease; } 
+
+        .categoria3{                        
+            padding: 4vh;
+            display: flex;
+            justify-content: center;
+            height: 15vh;
+            background-color:#c9ada7;}
+            .categoria3:hover {
+                transform: translateY(5px);
+                transition: all 0.3s ease; } 
+
+        .categoria4{                        
+            padding: 4vh;
+            display: flex;
+            justify-content: center;
+            height: 15vh;
+            background-color:#f2e9e4;}
+            .categoria4:hover {
+                transform: translateY(5px);
+                transition: all 0.3s ease; }
+
+        .categoria5{
+                        
+            padding: 4vh;
+            display: flex;
+            justify-content: center;
+            height: 15vh;
+            background-color:#bcb8b1   ;}  
+            .categoria5:hover {
+                transform: translateY(5px);
+                transition: all 0.3s ease; }
+            
+        .categoria6{           
+            padding: 4vh;
+            display: flex;
+            justify-content: center;
+            height: 15vh;
+            background-color:#8a817c}
+            .categoria6:hover {
+                transform: translateY(5px);
+                transition: all 0.3s ease; }      
+                      
+                      

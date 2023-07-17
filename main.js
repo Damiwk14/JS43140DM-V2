@@ -1,58 +1,132 @@
 
+// PENDIENTES: 
+//APLICAR EL FIND PARA QUE ME BUSQUE LOS ID´S DE LOS AUTOS
+// Y QUE NO ME DEJE AVANZAR SI NO USO ALGUNO DE LOS ID DE LOS SUB-ARREGLOS
+// Y APLICAR A LAS 6 CATEGORÍAS
+//  CAMBIAR NOMBRE MOSTRAR POR ALQUILAR 
 
-alert(`Bienvenido a la rentadora de autos N° 1 de la patagonia`)
 
-function simuladorAlquiler(){
-let auto = parseInt(prompt("ingrese el numero de auto que desea rentar: \n 1.Toyota Etios \n 2.Chevrolet Cruze \n 3.Toyota Hilux \n 4.Ford Mustang"));
+const hoy = new Date() 
+let usuarioCreado = false;
+mostrar_menu()
+
+
+//caso 1
+function rentar_economicos(){
+
+    let elegido = parseInt( prompt(`Ingrese el número de auto que desea alquilar\n${id_economicos[0]}. ${nombres_economicos[0]}\n${id_economicos[1]}. ${nombres_economicos[1]}\n${id_economicos[2]}. ${nombres_economicos[2]}\n${id_economicos[3]}. ${nombres_economicos[3]}`))
+        
+            if(elegido){ 
+                let auto_elegido = economicos.find((a) => a.id === elegido);
+                if(auto_elegido){
+                    calcular_economicos();
+    }
+                    else{alert("Debe ingresar un auto válido")
+                    rentar_economicos()}
+                         
+            }            }
+
+//caso 2
+function rentar_medianos(){
+
+    let elegido = parseInt( prompt(`Ingrese el número de auto que desea alquilar\n${id_medianos[0]}. ${nombres_medianos[0]}\n${id_medianos[1]}. ${nombres_medianos[1]}\n${id_medianos[2]}. ${nombres_medianos[2]}\n${id_medianos[3]}. ${nombres_medianos[3]}`))
+    
+            if(elegido){ 
+                let auto_elegido = medianos.find((a) => a.id === elegido);
+                if(auto_elegido){
+                    calcular_medianos();
+}
+                else{alert("Debe ingresar un auto válido") 
+                rentar_medianos() }       
+        }            }
+
+//caso 3
+function rentar_sedanes(){
+
+    let elegido = parseInt( prompt(`Ingrese el número de auto que desea alquilar\n${id_sedanes[0]}. ${nombres_sedanes[0]}\n${id_sedanes[1]}. ${nombres_sedanes[1]}\n${id_sedanes[2]}. ${nombres_sedanes[2]}\n${id_sedanes[3]}. ${nombres_sedanes[3]}`))
+        
+            if(elegido){ 
+                let auto_elegido = sedanes.find((a) => a.id === elegido);
+                if(auto_elegido){
+                    calcular_sedanes();
+
+    }
+                   else{ alert("Debe ingresar un auto válido")  
+                    rentar_sedanes()     } 
+            }            }
+
+
+// caso 4
+function rentar_suvs(){
+
+    let elegido = parseInt( prompt(`Ingrese el número de auto que desea alquilar\n${id_suvs[0]}. ${nombres_suvs[0]}\n${id_suvs[1]}. ${nombres_suvs[1]}\n${id_suvs[2]}. ${nombres_suvs[2]}\n${id_suvs[3]}. ${nombres_suvs[3]}`))
+        
+            if(elegido){ 
+                let auto_elegido = suvs.find((a) => a.id === elegido);
+                if(auto_elegido){
+                    calcular_suvs();
+
+    }
+                    else {alert("Debe ingresar un auto válido")
+                    rentar_suvs()   }    
+            }            }
+
+
+
+//caso 5
+function rentar_pickups(){
+
+    let elegido = parseInt( prompt(`Ingrese el número de auto que desea alquilar\n${id_pickups[0]}. ${nombres_pickups[0]}\n${id_pickups[1]}. ${nombres_pickups[1]}\n${id_pickups[2]}. ${nombres_pickups[2]}\n${id_pickups[3]}. ${nombres_pickups[3]}`))
+        
+            if(elegido){ 
+                let auto_elegido = pickups.find((a) => a.id === elegido);
+                if(auto_elegido){
+                    calcular_pickups();
+
+    }
+                    else {alert("Debe ingresar un auto válido")
+                    rentar_pickups() }     
+            }            }
+
+
+// caso 6
+function rentar_premiums(){
+
+    let elegido = parseInt( prompt(`Ingrese el número de auto que desea alquilar\n${id_premiums[0]}. ${nombres_premiums[0]}\n${id_premiums[1]}. ${nombres_premiums[1]}\n${id_premiums[2]}. ${nombres_premiums[2]}\n${id_premiums[3]}. ${nombres_premiums[3]}`))
+        
+            if(elegido){ 
+            let auto_elegido = premiums.find((a) => a.id === elegido);
+            if(auto_elegido){
+                calcular_premiums();
+
+    }
+                else {alert("Debe ingresar un auto válido")
+                rentar_premiums()    }   
+            }            }
+
+
+// caso 7
+function mostrar_flota(){
+    let flota = "Los autos disponibles son";
+
+    autos.forEach( (auto) =>{
+        flota+="\n" + auto.mostrar_descripcion();
+
+    })
+alert(flota);
+
+}   
+
+
+
+// caso 8
+
+function crear_usuario (){
+
+    let usuario = solicitar_datos_usuario();
+       if(usuario){ 
+         usuarios.push(usuario);        
+            alert("usuario creado con exito!")
   
-while (auto === null || /\D/.test(auto) || auto == "" ||auto > 4) {
-    auto = prompt("Ingrese un valor VÁLIDO para el auto \n 1.Toyota Etios \n 2.Chevrolet Cruze \n 3.Toyota Hilux \n 4.Ford Mustang");
-};
-
-if(auto===1){
-    costo=4000;
+    }
 }
- else if(auto===2){
-    costo=5000;
-}
- else if(auto===3){
-    costo=10000;
-}
-else if(auto===4){
-    costo=15000;
-}
-
-let dias = parseInt(prompt("Ingrese la cantidad de días"));
-    
-while (dias == null || /\D/.test(dias) || dias == "") {
-    dias = prompt("Ingrese un valor numérico para los días: ");
-};
-
-let costoTotal = costo*dias;
-
-alert(`El costo total es de ${costoTotal}`)
-
-let cuotas = parseInt(prompt("Ingrese la cantidad de cuotas en las que desea pagar \n 1 Cuota \n 3 cuotas \n 6 cuotas \n 12 cuotas"));
-    
-while (cuotas == null || /\D/.test(cuotas) || cuotas == "" ) {
-    cuotas = prompt("Ingrese un valor válido para las cuotas \n 1 Cuota \n 3 cuotas \n 6 cuotas \n 12 cuotas ");
-    
-};
-
-
-for(let i = 1; i <= cuotas; i++){
-    let resultado = (costoTotal/cuotas) ;
-    document.write(`La cuota ${i} es ${resultado}<br>`);
-    
-}
-document.write(`<br>EL COSTO TOTAL ES ${costoTotal} POR ${dias} DÍAS`);
-document.write(`<br><br>MUCHAS GRACIAS`);
-
-}
-
-simuladorAlquiler()
-
-
-
-// se ejecuta el proceso al invocar la función declarada
-
